@@ -49,7 +49,7 @@ Ensure your ``ModelAdmin`` class inherits from the
 
     # myapp/admin.py
     from django.contrib import admin
-    from admin_model_actions.admin import ModelAdminObjectActionsMixin
+    from admin_object_actions.admin import ModelAdminObjectActionsMixin
     from .models import MyModel
     
     @admin.register(MyModel)
@@ -61,7 +61,7 @@ additional input or confirmation and implement the ``do_object_action`` method::
 
     # myapp/forms.py
     from django import forms
-    from admin_model_actions.forms import AdminObjectActionForm
+    from admin_object_actions.forms import AdminObjectActionForm
     from .models import MyModel
 
     class MyActionForm(AdminObjectActionForm):
